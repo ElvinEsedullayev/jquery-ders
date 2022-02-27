@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery / Ders - 3<</title>
+	<style type="text/css">
+		#div1{
+			width: 200px;
+			height: 200px;
+			background-color: gray;
+			position: relative;
+			font-size: 32px;
+			margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn">Animate</button>
+	<br><br><br>
+	<div id="div1">Javascript</div>
+
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<!--
+	<script>
+		$(function(){
+			$("#btn").click(function(){
+				$("#div1").animate({
+					width: "400px",
+					height: "400px"
+				},3000);
+			});
+		});
+	</script>
+-->
+<script type="text/javascript">
+	$(function(){
+		$('#btn').click(function(){
+			$('#div1').animate({height: '500px'},3000);
+			$('#div1').queue(function(){
+				$(this).css('background-color','yellow');
+				$(this).dequeue();
+			});
+			$('#div1').animate({width: '500px'},3000);
+			$('#div1').queue(function(){
+				$(this).css('background-color','green');
+				$(this).dequeue();
+			});
+			$('#div1').animate({height: '300px'},3000);
+			$('#div1').queue(function(){
+				$(this).css('background-color','red');
+				$(this).dequeue();
+			});
+			$('#div1').animate({width: '300px'},3000);
+			$('#div1').queue(function(){
+				$(this).css('background-color','blue');
+				$(this).dequeue();
+			});
+		});
+	});
+</script>
+
+</body>
+</html>

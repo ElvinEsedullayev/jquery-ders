@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uygulama -1 / Jquery Dersleri</title>
+
+	<style type="text/css">
+		#dis{
+			width: 100%;
+			height: 150px;
+		}
+
+		.c1{
+			width: 15%;
+			height: 150px;
+			margin-left: 20px;
+			background-color: black;
+			color: white;
+			text-align: center;
+			line-height: 150px;
+			float: left;
+			font-weight: bold;
+			font-size: 32px;
+		}
+
+		#div1{
+			width: 95%;
+			height: 450px;
+			background-color: grey;
+			color: white;
+			position: relative;
+			top: 10px;
+			left: 10px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="dis">
+		<img src="../uygulamalar/resim1.jpg" class="c1" id="img1">
+		<img src="../uygulamalar/resim2.jpg" class="c1" id="img2">
+		<img src="../uygulamalar/resim3.jpg" class="c1" id="img3">
+		<img src="../uygulamalar/resim4.jpg" class="c1" id="img4">
+		<img src="../uygulamalar/resim5.jpg" class="c1" id="img5">
+		<img src="../uygulamalar/resim6.jpg" class="c1" id="img6">
+	</div>
+
+	<div id="div1"></div>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('#img1').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim1.jpg)');
+			});
+			$('#img1').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+
+
+
+
+			$('#img2').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim2.jpg)');
+			});
+			$('#img2').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+
+
+
+
+			$('#img3').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim3.jpg)');
+			});
+			$('#img3').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+
+
+
+
+			$('#img4').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim4.jpg)');
+			});
+			$('#img4').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+
+
+
+
+			$('#img5').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim5.jpg)');
+			});
+			$('#img5').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+
+
+
+
+
+			$('#img6').mouseover(function(){
+				$('#div1').fadeIn(2000).css('background-image','url(../uygulamalar/resim6.jpg)');
+			});
+			$('#img6').mouseleave(function(){
+				$('#div1').css('display','none');
+			});
+		})
+	</script>
+</body>
+</html>

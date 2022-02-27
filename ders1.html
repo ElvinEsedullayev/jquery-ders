@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery / Ders - 1</title>
+</head>
+<body>
+
+	<p>Jquery Oyrenirem</p>
+	<p>Jquery Oyrenirem</p>
+	<p>Jquery Oyrenirem</p>
+	<p>Jquery Oyrenirem</p>
+	<p>Jquery Oyrenirem</p>
+
+
+
+	<script type="text/javascript" src="jquery-3.6.0.slim.min.js"></script>
+	<!-- 
+	<script type="text/javascript">
+		$(function(){
+			$("p").click(function(){
+				$(this).hide();
+			});
+		})//bu jsquery kodlarini saf js da asagidaki kimi yaziriq
+	</script> 
+-->
+<script type="text/javascript">
+	var a = document.querySelectorAll("p");
+
+	for(i=0;i<4;i++){
+		a[i].onclick = function(){
+			a[i].style.display = 'none';
+		}
+	}
+	/*
+	a[0].onclick = function(){
+		a[0].style.display = 'none';
+	}
+	a[1].onclick = function(){
+		a[1].style.display = 'none';
+	}
+	a[2].onclick = function(){
+		a[2].style.display = 'none';
+	}
+	a[3].onclick = function(){
+		a[3].style.display = 'none';
+	}
+	a[4].onclick = function(){
+		a[4].style.display = 'none';
+	}
+	
+	*/
+	
+	
+</script>
+	
+</body>
+</html>
